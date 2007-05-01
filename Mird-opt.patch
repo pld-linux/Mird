@@ -1,0 +1,17 @@
+--- Mird-1.0.7/src/configure.in.orig	2001-09-19 14:17:30.000000000 +0200
++++ Mird-1.0.7/src/configure.in	2007-05-01 19:14:04.557082866 +0200
+@@ -56,14 +56,10 @@
+ fi
+ ])
+ 
+-CFLAGS=''
+-
+-MY_AC_PROG_CC_FLAG(-g)
+ MY_AC_PROG_CC_FLAG(-Wall)
+ if test "x$ac_cv_prog_cc_-Wall" = "xno"; then
+   MY_AC_PROG_CC_FLAG(-W)
+ fi
+-MY_AC_PROG_CC_FLAG(-O)
+ 
+ MY_AC_PROG_CC_FLAG(-fPIC)
+ if test "x$ac_cv_prog_cc_-fPIC" = "xno"; then
