@@ -1,0 +1,11 @@
+--- Mird-1.0.7/src/Makefile.in.orig	2001-09-19 14:17:30.000000000 +0200
++++ Mird-1.0.7/src/Makefile.in	2007-05-01 19:53:28.271783291 +0200
+@@ -27,7 +27,7 @@
+ 	$(AR) cq libmird.a $(OBJS)
+ 
+ libmird.@SOVER@ : libmird.a $(OBJS)
+-	$(LD) $(OBJS) $(LDSHARED) -o libmird.@SOVER@ 
++	$(LD) $(OBJS) $(LDSHARED) -Wl,-soname=libmird.@SOVER@ -o libmird.@SOVER@ 
+ 
+ testsuite : testsuite.o libmird.@SOVER@
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -L. -o testsuite testsuite.o -lmird
